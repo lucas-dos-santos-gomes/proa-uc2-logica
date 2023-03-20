@@ -1,0 +1,57 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+img {
+   width: 200px;
+   height: 120px;
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+
+   width: 80%;
+   height: 70vh;
+   margin: 0 auto;
+}
+
+.container_absoluto {
+   position: absolute;
+   width: 400px;
+   height: 200px;
+   top: 50%;
+   font-size: 16px;
+   font-family: verdana;
+   padding: 5px;
+   border: 5px double;
+   text-align: justify;
+   opacity: 0;
+   transition: 200ms opacity ease-in-out;
+}
+
+.camada1 {
+   background-color: aquamarine;
+   color: #00F;
+   border-color: #00F;
+}
+
+.camada2 {
+   background-color: #FAF;
+   color: #A22;
+   border-color: #A22;
+}
+
+.camada3 {
+   background-color: #5F5;
+   color: #173;
+   border-color: #000;
+}
+
+.container_absoluto img {
+   width: 60px;
+   height: 40px;
+   margin: 10px;
+}
