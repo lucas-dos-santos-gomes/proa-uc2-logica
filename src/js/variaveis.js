@@ -1,0 +1,24 @@
+let your_name = prompt("Insira seu nome: ");
+let age = parseInt(prompt("Insira sua idade: "));
+let weight = parseFloat(prompt("Insira seu peso: "));
+let height = parseFloat(prompt("Insira sua altura: "));
+let address = prompt("Insira seu endereço: ");
+let marital_status = prompt("Insira seu estado civil: ");
+let gender = prompt("Insira seu gênero: ");
+let nationality = prompt("Insira sua nacionalidade: ");
+
+document.write("<b>Nome:</b> " + your_name);
+document.write("<br>");
+document.write("<b>Idade:</b> " + age);
+document.write("<br>");
+document.write("<b>Peso (kg):</b> " + weight);
+document.write("<br>");
+document.write("<b>Altura (m):</b> " + height);
+document.write("<br>");
+document.write("<b>Endereço:</b> " + address);
+document.write("<br>");
+document.write("<b>Estado civil:</b> " + marital_status);
+document.write("<br>");
+document.write("<b>Gênero:</b> " + gender);
+document.write("<br>");
+document.write("<b>Nacionalidade:</b> " + nationality);
