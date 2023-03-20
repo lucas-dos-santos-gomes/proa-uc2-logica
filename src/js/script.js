@@ -10,11 +10,21 @@ imagens.forEach(imagem => {
             caixaAbsoluta[i].style.opacity = "1";
          }
       }
+
+      for(let i = 0; i < imagens.length; i++) {
+         if(imagens[i] != imagem) {
+            imagens[i].style.opacity = "0.5";
+         }
+      }
    });
 
    imagem.addEventListener("mouseout", () => {
       caixaAbsoluta.forEach(e => {
          e.style.opacity = "0";
+      });
+
+      imagens.forEach(e => {
+         e.style.opacity = "1";
       });
    });
 });
