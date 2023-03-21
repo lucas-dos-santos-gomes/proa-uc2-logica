@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercício 8</title>
+   </head>
+
+   <body>
+      <h1>Média de 4 notas</h1>
+      <script>
+         function verificaNumero(n) {
+            while (n < 0 || n > 10) {
+               n = parseInt(prompt("Digite um número entre 0 e 10"));
+            }
+            return n;
+         }
+
+         let n1, n2, n3, n4;
+         let ordinal_numbers = ["Primeiro", "Segundo", "Terceiro", "Quarto"];
+         let numbers = [n1, n2, n3, n4];
+         
+         for(var i = 0; i < numbers.length; i++) {
+            numbers[i] = parseInt(prompt(`Insira o ${ordinal_numbers[i].toLocaleLowerCase()} número: `));
+            numbers[i] = verificaNumero(numbers[i]);
+         }
+
+         let soma = numbers.reduce((a,i) => {
+            return a + i;
+         });
+         let media = soma / numbers.length;
+         
+         for(var i = 0; i < numbers.length; i++) {
+            document.write(ordinal_numbers[i] + " número: " + numbers[i]);
+            document.write("<br>");
+         }
+         document.write("<br>A média dos números é " + media);
+         if(media > 5) {
+            document.write("<br>Você passou no teste!");
+         } else {
+            document.write("<br>Tente novamente...");
+         }
+      </script>
+   </body>
+</html>

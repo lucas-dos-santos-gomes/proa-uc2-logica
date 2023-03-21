@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercício 7</title>
+   </head>
+
+   <body>
+      <h1>Inferior a 72</h1>
+      <script>
+         let n1, n2, n3, n4, n5, n6;
+         let ordinal_numbers = ["Primeiro", "Segundo", "Terceiro", "Quarto", "Quinto", "Sexto"];
+         let numbers = [n1, n2, n3, n4, n5, n6];
+         var acumulador = 0;
+         
+         for(var i = 0; i < numbers.length; i++) {
+            numbers[i] = parseInt(prompt(`Insira o ${ordinal_numbers[i].toLocaleLowerCase()} número: `));
+         }
+
+         let soma = numbers.reduce((a,i) => {
+            if(i < 72) {
+               acumulador += i;
+            }
+            return acumulador;
+         });
+         
+         for(var i = 0; i < numbers.length; i++) {
+            document.write(ordinal_numbers[i] + " número: " + numbers[i]);
+            document.write("<br>");
+         }
+         document.write("<br>A soma dos números é " + soma);
+      </script>
+   </body>
+</html>

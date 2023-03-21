@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercício 9</title>
+   </head>
+
+   <body>
+      <h1>Direito ao voto</h1>
+      <script>
+         let data = new Date();
+         let dia_atual = data.getDate();
+         let mes_atual = data.getMonth() + 1;
+         let ano_atual = data.getFullYear();
+         
+         let dia_nascimento = parseInt(prompt("Insira o dia que você nasceu (1 a 31): "));
+         while(dia_nascimento < 1 || dia_nascimento > 31) {
+            dia_nascimento = parseInt(prompt("Insira um dia válido (1 a 31): "));
+         }
+         let mes_nascimento = parseInt(prompt("Insira o mês que você nasceu (1 a 12): "));
+         while(mes_nascimento < 1 || mes_nascimento > 12) {
+            mes_nascimento = parseInt(prompt("Insira um mês válido (1 a 12): "));
+         }
+         let ano_nascimento = parseInt(prompt("Insira o ano que você nasceu: "));
+         while(ano_nascimento > ano_atual) {
+            ano_nascimento = parseInt(prompt(`Insira um ano válido (~${ano_atual}): `));
+         }
+
+         let idade;
+         if(mes_nascimento > mes_atual) {
+            idade = ano_atual - ano_nascimento - 1;
+         } else if(mes_atual > mes_nascimento) {
+            idade = ano_atual - ano_nascimento;
+         } else {
+            if(dia_nascimento > dia_atual) {
+               idade = ano_atual - ano_nascimento - 1;
+            } else {
+               idade = ano_atual - ano_nascimento;
+            }
+         }
+
+         document.write(`<b>Data de hoje:</b> ${dia_atual}/${mes_atual}/${ano_atual}`);
+         document.write(`<br><b>Sua data de nascimento:</b> ${dia_nascimento}/${mes_nascimento}/${ano_nascimento}`);
+         document.write("<br><b>Sua idade:</b> " + idade);
+         if(idade >= 16 && idade < 18) {
+            document.write("<br><br>Você já pode votar esse ano.");
+         } else if(idade >= 18){
+            document.write("<br><br>Você DEVE votar esse ano.");
+         } else {
+            document.write("<br><br>Você ainda não pode ou não vai poder votar esse ano.");
+         }
+      </script>
+   </body>
+</html>

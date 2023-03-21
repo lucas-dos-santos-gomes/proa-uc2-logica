@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercício 3</title>
+   </head>
+
+   <body>
+      <h1>O maior entre 3</h1>
+      <script>
+         let n1 = parseInt(prompt("Insira o primeiro número: "));
+         let n2 = parseInt(prompt("Insira o segundo número: "));
+         let n3 = parseInt(prompt("Insira o terceiro número: "));
+
+         if(n1 > n2 && n1 > n3) {
+            document.write("O maior número é o: " + n1);
+         } else if(n2 > n1 && n2 > n3) {
+            document.write("O maior número é o: " + n2);
+         } else if(n3 > n1 && n3 > n2) {
+            document.write("O maior número é o: " + n3);
+         } else {
+            document.write("Você não pode digitar números iguais");
+         }
+      </script>
+   </body>
+</html>
