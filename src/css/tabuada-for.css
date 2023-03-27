@@ -1,3 +1,17 @@
 main {
    text-align: center;
 }
+
+p {
+   margin: 0;
+}
+
+.tabuadas {
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   justify-content: space-between;
+}
+
+.tabuada {
+   margin: auto 30px;
+}
