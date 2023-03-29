@@ -40,7 +40,3 @@ for (let i = 0; i <= 10; i++) {
       */
    }
 }
-const body = document.querySelector("body");
-let elemento = document.createElement("div");
-body.appendChild(elemento);
-console.log(body);
