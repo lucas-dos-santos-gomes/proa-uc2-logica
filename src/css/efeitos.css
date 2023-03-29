@@ -1,0 +1,126 @@
+body {
+   padding: 0 50px;
+   box-sizing: border-box;
+}
+
+.moldura {
+   font-family: Verdana;
+   font-weight: bold;
+   font-size: 50px;
+   /* Efeito de Sombra no Texto */
+   -webkit-text-fill-color: rgb(197, 8, 8);
+   -webkit-text-stroke-color: #000;
+   -webkit-text-stroke-width: 3px;
+}
+
+.container1 {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.caixa1 {
+   width: 200px;
+   height: 200px;
+   padding-left: 10px;
+   background-color: #CDF;
+   border: 1px solid #000;
+   border-radius: 15px;
+   box-shadow: -10px -10px 10px rgb(16, 15, 225);
+}
+
+.caixa2 {
+   width: 200px;
+   height: 200px;
+   padding-left: 10px;
+   background-color: #77F;
+   border: 1px solid #000;
+   border-radius: 15px;
+   box-shadow: 10px 10px 10px rgb(225, 15, 16);
+}
+
+.sombra-texto {
+   font-family: Verdana;
+   font-weight: bold;
+   font-size: 50px;
+   text-shadow: 5px 5px 10px #099;
+}
+
+.colunas {
+   font-family: Verdana;
+   font-weight: bold;
+   font-size: 12px;
+   column-count: 3; /* Número de colunas */
+   column-rule: 1px solid #000; /* Linha entre as colunas */
+   column-gap: 30px;  /* Espaçamento das colunas */
+   text-align: justify;
+}
+
+.container2 {
+   width: 600px;
+   height: 500px;
+   padding: 20px;
+   background-image: url(../img/rodovia.jpg);
+   background-size: cover;
+}
+
+.transparente {
+   width: 350px;
+   height: 300px;
+   margin: auto;
+   background-color: rgba(160, 160, 160, 0.6);
+}
+
+.gradiente1 {
+   width: 400px;
+   height: 200px;
+   background: linear-gradient(left top, left bottom, from(#CFC), to(#0F0));
+   background: -webkit-gradient(linear, left top, left bottom, from(#CFC), to(#0F0));
+   background: -moz-gradient(linear, left top, left bottom, from(#CFC), to(#0F0));
+   margin-top: 30px;
+}
+
+.gradiente2 {
+   width: 400px;
+   height: 200px;
+   background: linear-gradient(left top, left bottom, from(#CFC), to(#0F0));
+   background: -webkit-gradient(linear, left top, right bottom, from(#CFC), to(#F70));
+   background: -moz-gradient(linear, left top, left bottom, from(#CFC), to(#0F0));
+   margin-top: 30px;
+}
+
+.gradiente3 {
+   width: 400px;
+   height: 200px;
+   background: radial-gradient(50% 50%, 20, 50% 50%, 90, from(#F1F6F5), to(#3B1D07));
+   background: -webkit-gradient(radial, 50% 50%, 20, 50% 50%, 90, from(#F1F6F5), to(#3B1D07));
+   background: -moz-gradient(radial, 50% 50%, 20, 50% 50%, 90, from(#F1F6F5), to(#3B1D07));
+   margin-top: 30px;
+}
+/* Criando animação */
+@keyframes pulsar {
+   from {
+      opacity: 0;
+      font-size: 100%;
+   } to {
+      opacity: 1;
+      font-size: 200%;
+   }
+}
+
+.animacao {
+   margin-top: 5vh;
+   height: 10vh;
+   font-family: Verdana;
+   font-weight: bold;
+   font-size: 12px;
+   color: #F00;
+   text-align: center;
+
+   /* Usando a animação */
+   animation-name: pulsar;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-direction: alternate;
+}
