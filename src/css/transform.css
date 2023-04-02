@@ -1,0 +1,55 @@
+.principal {
+   display: flex;
+   flex-wrap: wrap;
+   margin: auto;
+}
+.container-imagens {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 300px;
+   height: 200px;
+   border: 1px solid #000;
+   padding: 10px;
+}
+.container-imagens img {
+   transition: 1.5s all;
+}
+.container-imagens:first-child:hover img {
+   transform: rotate(360deg); /* Efeito de rotação no eixo Z (rotateZ) */
+}
+.container-imagens:nth-child(2):hover img {
+   transform: rotateX(180deg); /* Efeito de rotação no eixo X */
+}
+.container-imagens:nth-child(3):hover img {
+   transform: rotateY(90deg); /* Efeito de rotação no eixo Y */
+   transition: 1s all;
+}
+.container-imagens:nth-child(4):hover img {
+   transform: translate(100px, 50px); /* Efeito de deslocamento (X, Y)*/
+}
+.container-imagens:nth-child(5) img {
+   transform: translateX(-400px); /* Efeito de deslocamento no eixo X */
+}
+.container-imagens:nth-child(5):hover img {
+   transform: translateX(0); /* -webkit-transform */
+   transition: 1.5s all;
+}
+.container-imagens:nth-child(5) img {
+   transition: 500ms ease-in-out;
+}
+.container-imagens:nth-child(6):hover img {
+   transform: translate(150px, 200px) rotate(360deg); /* Misturando efeitos no transform */
+}
+.container-imagens:nth-child(7) img, .container-imagens:nth-child(8) img {
+   transition: 300ms all;
+}
+.container-imagens:nth-child(7):hover img {
+   transform: scale(1.4); /* Aumenta escala (tamanho) do elemento */
+   transition: 300ms all;
+}
+.container-imagens:nth-child(8):hover img {
+   transform: scale(0.7); /* Diminui escala (tamanho) do elemento */
+   transition: 300ms all;
+}
