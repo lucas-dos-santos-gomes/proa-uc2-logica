@@ -1,0 +1,67 @@
+@keyframes escalaCinza {
+   from {
+      filter: grayscale(0);
+   } to {
+      filter: grayscale(100%);
+   }
+}
+@keyframes saturacao {
+   from {
+      filter: saturate(0);
+   } to {
+      filter: saturate(5);
+   }
+}
+body {
+   padding: 30px 20px;
+}
+main {
+   display: grid;
+   grid-template-columns: repeat(4, 200px);
+   gap: 20px;
+}
+.container-imagem {
+   width: 200px;
+   height: 150px;
+   border: 1px solid #CCC;
+   cursor: pointer;
+   transition: 200ms;
+}
+.container-imagem img {
+   width: 100%;
+   height: 100%;
+}
+.container-imagem:hover:nth-child(odd) {
+   box-shadow: 5px 5px 5px #009;
+}
+.container-imagem:hover:nth-child(even) {
+   box-shadow: -5px -5px 5px #900;
+}
+.container-imagem:hover:first-child {
+   filter: grayscale(100%); /* preto e branco */
+}
+.container-imagem:nth-child(2) {
+   animation-name: saturacao; /* deixa mais colorido */
+   animation-duration: 1.5s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-direction: alternate;
+}
+.container-imagem:hover:nth-child(3) {
+   filter: sepia(100%); /* efeito de velho / antigo */
+}
+.container-imagem:hover:nth-child(4) {
+   filter: invert(100%); /* negativo */
+}
+.blur:hover {
+   filter: blur(3px);
+}
+.opacity:hover {
+   filter: opacity(30%);
+}
+.container-imagem:not(:hover):nth-child(7) {
+   filter: brightness(0.25);
+}
+.container-imagem:hover:last-child {
+   filter: contrast(160%);
+}
