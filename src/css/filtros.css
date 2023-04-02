@@ -19,8 +19,9 @@ main {
    display: grid;
    grid-template-columns: repeat(4, 200px);
    gap: 20px;
+   align-items: center;
 }
-.container-imagem {
+div {
    width: 200px;
    height: 150px;
    border: 1px solid #CCC;
@@ -65,3 +66,22 @@ main {
 .container-imagem:hover:last-child {
    filter: contrast(160%);
 }
+.rollover {
+   background-image: url(../img/sun.jpg);
+   background-size: cover;
+   transition: 500ms;
+}
+.rollover:hover {
+   background-image: url(../img/moon.jpg);
+}
+.on-off {
+   background-image: url(../img/on_off.png);
+   background-size: cover;
+   background-position-y: top;
+   height: 100px;
+   transition: none;
+}
+.on-off:hover {
+   background-position: bottom;
+}
+/* 02:30:40 */
