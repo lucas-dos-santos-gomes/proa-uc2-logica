@@ -1,0 +1,45 @@
+a {
+   display: inline-block;
+   background-image: url(../img/moon.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   border: 50px rgba(255, 0, 0, 0.5);
+   border-radius: 100%;
+   box-sizing: border-box;
+   width: 100px;
+   height: 100px;
+   transition: 1s ease;
+}
+a:hover {
+   border-width: 0;
+   border-color: rgba(0, 0, 0, 0.5);
+}
+.efects:first-child{border-style: solid;}
+.efects:nth-child(2){border-style: dashed;} /* Tracejado */
+.efects:nth-child(3){border-style: dotted;} /* Pontilhado */
+
+.new-efects {border: 50px rgba(0, 0, 0, 0.7);}
+.new-efects:first-child {border-style: solid;}
+.new-efects:nth-child(2){border-style: dashed;}
+.new-efects:nth-child(3){border-style: dotted;}
+.new-efects:nth-child(4){border-style: double;} /* Dupla */
+.new-efects:hover{
+   border-style: 1px; 
+   border-color: rgba(0, 0, 255, 0.7);
+}
+
+.more-efects {
+   border-radius: 0;
+   border-style: 50px;
+   border-color: rgba(0, 0, 0, 0.7);
+}
+.more-efects:first-child {border-style: solid;}
+.more-efects:nth-child(2){border-style: dashed;}
+.more-efects:nth-child(3){border-style: dotted;}
+.more-efects:hover{
+   border-style: 1px;
+   border-color: rgba(0, 100, 0, 0.7);
+}
+.more-efects:first-child:hover {
+   border-style: double;
+}
