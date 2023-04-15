@@ -15,7 +15,7 @@ body {
 }
 
 .content {
-  width: 70%;
+  width: 70vw;
   height: 80vh;
   border-radius: 20px;
   overflow: hidden;
@@ -25,12 +25,54 @@ input {
   display: none;
 }
 
+.slides {
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+
+.slide {
+  width: 20%;
+  transition: 500ms;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+#slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+#slide3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+#slide4:checked ~ .s1 {
+  margin-left: -60%;
+}
+
+#slide5:checked ~ .s1 {
+  margin-left: -80%;
+}
+
 .navigation {
   position: absolute;
   bottom: 15vh;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  opacity: 0;
+  transition: 300ms;
+}
+
+.content:hover > .slides .navigation {
+  opacity: 1;
 }
 
 .bar {
@@ -45,4 +87,24 @@ input {
 
 .bar:hover {
   background-color: #FFFFFF66;
+}
+
+#slide1:checked ~ .navigation > .b1:not(.b2,.b3,.b4,.b5) {
+  background-color: #FFF;
+}
+
+#slide2:checked ~ .navigation > .b2:not(.b1,.b3,.b4,.b5) {
+  background-color: #FFF;
+}
+
+#slide3:checked ~ .navigation > .b3:not(.b1,.b2,.b4,.b5) {
+  background-color: #FFF;
+}
+
+#slide4:checked ~ .navigation > .b4:not(.b1,.b2,.b3,.b5) {
+  background-color: #FFF;
+}
+
+#slide5:checked ~ .navigation > .b5:not(.b1,.b2,.b3,.b4) {
+  background-color: #FFF;
 }
