@@ -1,0 +1,30 @@
+html {
+  font-size: 10px;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+img {
+  width: 30vw;
+}
+
+.header_buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.main_image {
+  display: flex;
+  justify-content: center;
+}
